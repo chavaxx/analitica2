@@ -1,0 +1,9 @@
+Para poder correr el archivo actividad3.ipynb
+
+en la linea de comando correr
+
+pip3 install seaborn
+pip3 install pandas
+
+Darle correr a todo de arriba hacia abajo ya que hay
+partes de codigo que dependen de pasos anteriores
