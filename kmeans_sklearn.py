@@ -88,18 +88,44 @@ plt.show()
 # %%
 cluster0 = df[kmeans.labels_ == 0]
 cluster0.describe()
+
+#%%
+sns.heatmap(cluster0.corr(), annot=True)
+
 # %%
 cluster1 = df[kmeans.labels_ == 1]
 cluster1.describe()
+
+#%%
+sns.heatmap(cluster1.corr(), annot=True)
+
 # %%
 cluster2 = df[kmeans.labels_ == 2]
 cluster2.describe()
+
+#%%
+sns.heatmap(cluster2.corr(), annot=True)
+
 # %%
 cluster3 = df[kmeans.labels_ == 3]
 cluster3.describe()
+
+#%%
+sns.heatmap(cluster3.corr(), annot=True)
+
 # %%
 cluster4 = df[kmeans.labels_ == 4]
 cluster4.describe()
+
+#%%
+sns.heatmap(cluster4.corr(), annot=True)
+
+#%%
+sns.boxplot(x="discount%", y="total_items", data=cluster0, palette='rainbow') 
+
+#%%
+sns.boxplot(x="weekday%", y="hour", data=cluster0, palette='rainbow') 
+
 # %%
 from sklearn.tree import DecisionTreeClassifier, export_text
 
