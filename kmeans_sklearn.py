@@ -85,7 +85,21 @@ kmeans = KMeans(n_clusters=k).fit(df[["Fresh%", "Food%", "Drinks%", "Home%", "Be
 sns.boxplot(x=kmeans.labels_, y="total_items", data=df, palette='rainbow')
 plt.show()
 
-
+# %%
+cluster0 = df[kmeans.labels_ == 0]
+cluster0.describe()
+# %%
+cluster1 = df[kmeans.labels_ == 1]
+cluster1.describe()
+# %%
+cluster2 = df[kmeans.labels_ == 2]
+cluster2.describe()
+# %%
+cluster3 = df[kmeans.labels_ == 3]
+cluster3.describe()
+# %%
+cluster4 = df[kmeans.labels_ == 4]
+cluster4.describe()
 # %%
 from sklearn.tree import DecisionTreeClassifier, export_text
 
