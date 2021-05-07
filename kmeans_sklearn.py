@@ -120,11 +120,16 @@ cluster4.describe()
 #%%
 sns.heatmap(cluster4.corr(), annot=True)
 
+#%% 
+sns.scatterplot(data=df, x="weekday", y="hour", hue=kmeans.labels_) 
 #%%
-sns.boxplot(x="discount%", y="total_items", data=cluster0, palette='rainbow') 
+sns.scatterplot(data=df, x="total_items", y="discount%", hue=kmeans.labels_) 
 
 #%%
-sns.boxplot(x="weekday%", y="hour", data=cluster0, palette='rainbow') 
+sns.boxplot(x="weekday", y="hour", data=cluster0, palette='rainbow') 
+
+#%%
+sns.boxplot(x="weekday", y="hour", data=cluster1, palette='rainbow') 
 
 # %%
 from sklearn.tree import DecisionTreeClassifier, export_text
